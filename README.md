@@ -166,3 +166,21 @@ The platform calculates:
 
 ```bash
 docker compose up -d --build
+```
+
+### Services :
+
+* Frontend → http://localhost:3000
+* API → http://localhost:8080
+* Keycloak → http://localhost:8081
+
+## 🔐 Security Model
+
+Authentication is handled by Keycloak using OpenID Connect.
+
+The backend validates JWT tokens as a resource server.
+
+Authorization is role-based and enforced at:
+
+* API level (Spring Security)
+* UI level (Next.js)
